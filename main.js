@@ -22,6 +22,26 @@ if(localStorage.getItem("totalLosses") !== null){
     wrongA.innerHTML = "wrong: " + totalLosses;
 }
 
+// User must be timed.
+
+function setTime() {
+    secondsLeft = 99;
+    timerA.textContent = secondsLeft;
+    //  Set interval in variable
+    timerInterval = setInterval(function () {
+        secondsLeft--;
+        timerA.textContent = secondsLeft;
+    
+        if (secondsLeft === 0) {
+             // stops action at set interval
+            clearInterval(timerInterval);
+            checkIfLost ();
+        }
+    }, 1000);
+}
+
+// start the quiz by clicking on start button
+
 
 
 var imgTag = document.createElement("img");
