@@ -4,6 +4,12 @@ review 9/25 went of class when going over project
 
 A series of questions
 var userGuess = prompt(question);
+var correctAnswer
+
+if answered correctly 
+alert("You Got It!")
+if answered wrong
+substract time off the clock
 
 
 <!-- # 04 Web APIs: Code Quiz
