@@ -41,6 +41,10 @@ function setTime() {
 }
 
 // start the quiz by clicking on start button
+startButton.addEventListener("click", function (event) {
+    console.log("start");
+    
+})
 
 
 
