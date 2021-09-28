@@ -4,6 +4,7 @@ var guessAnswer = document.querySelector("#guess-answer");
 var rightA = document.querySelector("#right");
 var wrongA = document.querySelector("#wrong");
 var timerA = document.querySelector("#timer");
+var container = document.querySelector(".container")
 
 var AnswerTrack = [];
 var WrongAnswer = 0;
@@ -43,7 +44,17 @@ function setTime() {
 // start the quiz by clicking on start button
 startButton.addEventListener("click", function (event) {
     console.log("start");
-    
+
+})
+// click on the answer
+container.addEventListener("click", function(event) {
+    var element = event.target;
+
+    if(element.matches(".box")) {
+        var state = element.setAttribute("data-answer");
+        alert("correct!")
+    }
+
 })
 
 
