@@ -1,4 +1,4 @@
-console.log("I'm connected");
+// console.log("I'm connected");
 var startButton = document.querySelector("#start-button");
 var guessAnswer = document.querySelector("#guess-answer");
 var correctA = document.querySelector("#correct");
@@ -27,11 +27,11 @@ if(localStorage.getItem("totalLosses") !== null){
 
 function setTime() {
     secondsLeft = 90;
-    timerP.textContent = secondsLeft;
+    timerA.textContent = secondsLeft;
 
     timerInterval = setInterval(function () {
         secondsLeft--;
-        timerP.textContent = secondsLeft;
+        timerA.textContent = secondsLeft;
         //   timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
 
         if (secondsLeft === 0) {
@@ -49,7 +49,6 @@ function setTime() {
 // start the quiz by clicking on start button
 startButton.addEventListener("click", function (event) {
     console.log("start");
-
 })
 // click on the answer
 container.addEventListener("click", function(event) {
@@ -64,13 +63,13 @@ container.addEventListener("click", function(event) {
 
 
 
-var imgTag = document.createElement("img");
+// var imgTag = document.createElement("img");
 
-imgTag.setAttribute("src", "assets/images/hoopla-is-dead.png");
-imgTag.setAttribute("alt", "Start Test");
+// imgTag.setAttribute("src", "assets/images/hoopla-is-dead.png");
+// imgTag.setAttribute("alt", "Start Test");
 
-imgTag.addEventListener("click", function(){
-    console.log("Maybe this will start");
-});
+// imgTag.addEventListener("click", function(){
+//     console.log("Maybe this will start");
+// });
 
-document.body.appendChild(imgTag);
+// document.body.appendChild(imgTag);

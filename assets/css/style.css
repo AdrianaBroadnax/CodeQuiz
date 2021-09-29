@@ -25,13 +25,13 @@ h1 {
     background-color: #093145;
     text-align: center;
     line-height: 200px;
-    font-size: 150px;
+    font-size: 50px;
     color: whitesmoke;
   }
   
-  @media (max-width: 740px) {
+  /* @media (max-width: 740px) {
     .box {
       width: 48%;
     }
-  }
+  } */
   
