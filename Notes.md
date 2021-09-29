@@ -2,6 +2,14 @@ how to make a timer is on activities 9 and 10 in 4 web api
 review 9/27 beginning lecture 1 hr in 
 review 9/25 went of class when going over project 
 
+Activity 20 for the containers , 
+containers need style.css index.html and java (need three containers)
+<!-- need to get the boxes on the html -->
+
+Activity 28 so help set up the vars 
+and the timer
+<!-- need to get the timer to show up on the html -->
+
 A series of questions
 var userGuess = prompt(question);
 var correctAnswer
