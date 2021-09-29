@@ -26,18 +26,23 @@ if(localStorage.getItem("totalLosses") !== null){
 // User must be timed.
 
 function setTime() {
-    secondsLeft = 99;
-    timerA.textContent = secondsLeft;
-    //  Set interval in variable
+    secondsLeft = 90;
+    timerP.textContent = secondsLeft;
+
     timerInterval = setInterval(function () {
         secondsLeft--;
-        timerA.textContent = secondsLeft;
-    
+        timerP.textContent = secondsLeft;
+        //   timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+
         if (secondsLeft === 0) {
-             // stops action at set interval
+            // Stops execution of action at set interval
             clearInterval(timerInterval);
-            checkIfLost ();
+            // Calls function to create and append image
+            // sendMessage();
+            // * As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
+            checkIfLost();
         }
+
     }, 1000);
 }
 
