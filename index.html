@@ -4,39 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Code Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css"/>
-    <script src="main.js" defer></script>
+
 </head>
 <body>
-    <main>
-        <button id="startButton"> start</button>
-    </main>
-    <!-- javascript should have at least 3-5 containers -->
+<!-- java should have at least 3 containers-->
     <!-- code below is just an example and can be removed/modified -->
-   
-    <h1 id="question">What's the shortcut for the "copy" function on most computers?</h1>
-    <div class="container"></div>
-        <div class="box">shift c</div>
-        <div class="box">alt c</div>
-        <div class="box">ctrl c</div>
+    <header>
+        <div class="highscore">Highscores!</div>
+        <div class="time">Timer: 90</div>
+    </header>
+    <section>
+        <div class="container" id="questionContainer">
+            <p>Welcome to the Coding Quiz! Let's test your knowledge and see how much you know about coding! This is a multiple choice quiz with 5 questions, click start to begin!</p>
+            <button type="button" class="btn" id="start">Start</button>
+        </div>
+    </section>
+    <section>
+        <!-- show the current question -->
+        <div class="questionDisplay"></div>
+        <!-- Correct or Incorrect -->
+        <div class="Correct">
+            <div class="timeRanOut">
+            </div>
+        </div>
+        <!-- highscore and ititals -->
+        <div class="highScoreP" style="display: none;">
+            <div id="message"></div>
+            <div id="score"></div>
+            <div id="correct"></div>
+            <div id="incorrect"></div>
+            <div id="initial">
+                <form>
+                    Initials:<input type="text" placeholder="Enter Initials" id="userInput"
+                    name="initial">
+                    <input type="button" id="subInitial" value="Submit"> style="color:aqua;"
+                </form>
+            </div>
 
-    <h1 id="question">Question here</h1>
-    <div class="container"></div>
-        <div class="box" data-answer=""></div>
-        <div class="box" data-answer=""></div>
-        <div class="box" data-answer=""></div>
-
-    <h1 id="question">Question here</h1>
-    <div class="container"></div>
-        <div class="box" data-answer=""></div>
-        <div class="box" data-answer=""></div>
-        <div class="box" data-answer=""></div>
-
-    <p id="correct">Correct: 0</p>
-    <p id="incorrect">Incorrect: 0</p>
-    <p id="timer">0</p>
-
-    <script src="script.js" defer></script>
+        </div>
+    </section>
+    <!-- <section>
+        <h1 id="question">Question here</h1>
+        <ol id="answer">
+            <li>Answer here</li>
+        </ol>
+    </section> -->
+    <script src="main.js"></script>
 </body>
 </html>
