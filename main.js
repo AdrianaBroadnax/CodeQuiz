@@ -10,7 +10,8 @@ var wrongAnswer = 0;
 var totalCorrect = 0;
 var totalIncorrect = 0;
 var timerInterval = null;
-var secLeft = 0;
+var secondsLeft = 0;
+
 // When a user refreshers or returns to the browser page
 if(localStorage.getItem("totalCorrect") !== null){
     totalWins = parseInt(localStorage.getItem("totalCorrect") );
@@ -19,6 +20,30 @@ if(localStorage.getItem("totalCorrect") !== null){
 if(localStorage.getItem("totalIncorrect") !== null){
     totalLosses = parseInt(localStorage.getItem("totalIncorrect") );
     lossesP.innerHTML = "incorrect: " + totalLosses;
+
+// the quiz will be timed.
+function setTime() {
+    secondsLeft = 90;
+    timerP.textContent = secondsLeft;
+    // Sets interval in variable
+    timerInterval = setInterval(function () {
+        secondsLeft--;
+        timerP.textContent = secondsLeft;
+        //   timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+
+        if (secondsLeft === 0) {
+            // Stops execution of action at set interval
+            clearInterval(timerInterval);
+            // Calls function to create and append image
+            // sendMessage();
+            // * As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
+            checkIfLost();
+        }
+
+    }, 1000);
+}
+//  the questions will appear
+
 
 var imgTag = document.createElement("img");
 
