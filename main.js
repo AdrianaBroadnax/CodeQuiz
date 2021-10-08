@@ -43,7 +43,26 @@ function setTime() {
     }, 1000);
 }
 //  the questions will appear
+startButton.addEventListener("click", function (event) {
+    // console.log("start");
+    // var listOfRandomWords = ["cardi b", "jaylen hurtz", "jay z", "denzel washington"]
+    // var computerWord = listOfRandomWords[Math.floor(Math.random() * listOfRandomWords.length)]; 
+    console.log("start");
+    var questionText = ""
 
+    var letters = computerWord.split("");
+    letterTrack = [];
+    for (var i = 0; i < letters.length; i++) {
+        if (letters[i] === " ") {
+            letterTrack.push({ letter: letters[i], guessed: true });
+        }
+        else {
+            letterTrack.push({ letter: letters[i], guessed: false });
+        }
+    }
+
+    console.log(letterTrack);
+    renderLetters();
 
 var imgTag = document.createElement("img");
 
