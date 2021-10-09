@@ -1,3 +1,6 @@
 body{
     background: paleturquoise;
 }
+*{
+    font-family: monospace;
+}
