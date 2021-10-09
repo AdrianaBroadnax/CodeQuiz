@@ -47,65 +47,48 @@ function setTime() {
 }
 //  the questions will appear
 startButton.addEventListener("click", function (event) {
-    // console.log("start");
-    // var listOfRandomWords = ["cardi b", "jaylen hurtz", "jay z", "denzel washington"]
-    // var computerWord = listOfRandomWords[Math.floor(Math.random() * listOfRandomWords.length)]; 
-console.log("start")
 // questions are from w3schools Javascript quiz
-var questions = [
-    { title: "The external JavaScript file must contain the <script> tag.",
-    multipleChoice: ["True", "False"],
-    answerTrack: ["False"]},
-    { title: "How to write an IF statement in JavaScript?",
-    multipleChoice: ["if (i == 5)", "if i = 5 then", "if i = 5", "if i == 5 then"],
-    answerTrack: ["if (i == 5)"],},
-    { title: "How does a FOR loop start?",
-    multipleChoice: ["for (i=0; i<=5; i++)", "for i = 1 to 5", "for (i = 0; i<= 5", "for (i<= 5; i++)"],
-    answerTrack: ["for (i = 0; i <=5; i++)"],}
-]
+    var questions = [
+        { title: "The external JavaScript file must contain the <script> tag.",
+        multipleChoice: ["True", "False"],
+        answerTrack: ["False"]},
+        { title: "How to write an IF statement in JavaScript?",
+        multipleChoice: ["if (i == 5)", "if i = 5 then", "if i = 5", "if i == 5 then"],
+        answerTrack: ["if (i == 5)"],},
+        { title: "How does a FOR loop start?",
+        multipleChoice: ["for (i=0; i<=5; i++)", "for i = 1 to 5", "for (i = 0; i<= 5", "for (i<= 5; i++)"],
+        answerTrack: ["for (i = 0; i <=5; i++)"],}
+    ]
 
-var found = false;
-for (var i = 0; i < answerTrack.length; i++) {
-    if (!answerTrack[i].guessed) {
+    var found = false;
+    for (var i = 0; i < answerTrack.length; i++) {
+        if (!answerTrack[i].guessed) {
         found = true;
+        }
     }
-}
-if (!found) {
+    if (!found) {
     // * When a user wins or loses a game, a message should appear and the timer should stop. 
-    alert("You win!");
-    totalCorrect++;
+        alert("You win!");
+        totalCorrect++;
     // textContent
-    correctP.innerHTML = "Correct: " + totalCorrect;
-    clearInterval(timerInterval);
-    localStorage.setItem("totalCorrect", totalCorrect);
+        correctP.innerHTML = "Correct: " + totalCorrect;
+        clearInterval(timerInterval);
+        localStorage.setItem("totalCorrect", totalCorrect);
+    }
+    });
 }
-});
 
-function checkIfLost() {
-var found = false;
-for (var i = 0; i < answerTrack.length; i++) {
-    if (!answerTrack[i].guessed) {
+    function checkIfLost() {
+    var found = false;
+    for (var i = 0; i < answerTrack.length; i++) {
+        if (!answerTrack[i].guessed) {
         found = true;
+        }
+    }
+    if (found) {
+        alert("You lost!");
+        totalIncorrect++;
+        incorrectP.innerHTML = "Incorrect: " + totalIncorrect;
+        localStorage.setItem("totalIncorrect", totalIncorrect);
     }
 }
-if (found) {
-    // * When a user wins or loses a game, a message should appear and the timer should stop. 
-
-
-    alert("You lost!");
-    totalIncorrect++;
-    incorrectP.innerHTML = "Incorrect: " + totalIncorrect;
-    localStorage.setItem("totalIncorrect", totalIncorrect);
-}
-}
-// var imgTag = document.createElement("img");
-
-// imgTag.setAttribute("src", "assets/images/hoopla-is-dead.png");
-// imgTag.setAttribute("alt", "Start Test");
-
-// imgTag.addEventListener("click", function(){
-//     console.log("Maybe this will start");
-// });
-
-// document.body.appendChild(imgTag)
-// }
