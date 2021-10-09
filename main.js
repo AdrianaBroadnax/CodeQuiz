@@ -4,6 +4,9 @@ var guessWordPre = document.querySelector("#answer");
 var winsP = document.querySelector("#correct");
 var lossesP = document.querySelector("#incorrect");
 var timerP = document.querySelector("#timer");
+var multipleChoice = document.querySelector("#choice");
+var questions = document.querySelector("#questionsA")
+var answer = document.querySelector("#answerA")
 
 var answerTrack = [];
 var wrongAnswer = 0;
@@ -47,30 +50,21 @@ startButton.addEventListener("click", function (event) {
     // console.log("start");
     // var listOfRandomWords = ["cardi b", "jaylen hurtz", "jay z", "denzel washington"]
     // var computerWord = listOfRandomWords[Math.floor(Math.random() * listOfRandomWords.length)]; 
-    console.log("start");
-    var questionText = ""
+console.log("start")
+var questions = [
+    { title: "The external JavaScript file must contain the <script> tag.",
+    multipleChoice: ["True", "False"],
+    answer: ["False"]},
+    
+]
+// var imgTag = document.createElement("img");
 
-    var letters = computerWord.split("");
-    letterTrack = [];
-    for (var i = 0; i < letters.length; i++) {
-        if (letters[i] === " ") {
-            letterTrack.push({ letter: letters[i], guessed: true });
-        }
-        else {
-            letterTrack.push({ letter: letters[i], guessed: false });
-        }
-    }
+// imgTag.setAttribute("src", "assets/images/hoopla-is-dead.png");
+// imgTag.setAttribute("alt", "Start Test");
 
-    console.log(letterTrack);
-    renderLetters();
+// imgTag.addEventListener("click", function(){
+//     console.log("Maybe this will start");
+// });
 
-var imgTag = document.createElement("img");
-
-imgTag.setAttribute("src", "assets/images/hoopla-is-dead.png");
-imgTag.setAttribute("alt", "Start Test");
-
-imgTag.addEventListener("click", function(){
-    console.log("Maybe this will start");
-});
-
-document.body.appendChild(imgTag);
+// document.body.appendChild(imgTag)
+// })
