@@ -1,4 +1,4 @@
-console.log("I'm connected");
+// console.log("I'm connected");
 var startButton = document.querySelector("#start-button");
 var guessWordPre = document.querySelector("#answer");
 var correctP = document.querySelector("#correct");
