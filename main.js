@@ -46,7 +46,10 @@ function setTime() {
     }, 1000);
 }
 //  the questions will appear
-startButton.addEventListener("click", function (event) {
+// startButton.addEventListener("click", function (onclick) {
+    document.getElementById("start-button").addEventListener("click", function() {
+        document.getElementById(startButton).innerHTML = "Start";
+      });
 // questions are from w3schools Javascript quiz
     var questions = [
         { title: "The external JavaScript file must contain the <script> tag.",
@@ -75,8 +78,7 @@ startButton.addEventListener("click", function (event) {
         clearInterval(timerInterval);
         localStorage.setItem("totalCorrect", totalCorrect);
     }
-    });
-}
+    }
 
     function checkIfLost() {
     var found = false;
