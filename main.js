@@ -51,6 +51,7 @@ function setTime() {
         document.getElementById(startButton).innerHTML = "Start";
       });
 // questions are from w3schools Javascript quiz
+//  quiz must have 3-5 questions in a container
     var questions = [
         { title: "The external JavaScript file must contain the <script> tag.",
         multipleChoice: ["True", "False"],
