@@ -27,4 +27,6 @@ Then I added a header for the highscores and the timer. next i made a section wh
 
 Next I put a highscore page together that will display after the user has finished the quiz. On the highscore page the user will be able to put their initials and see their score along with others who took the test.
 
+Deployed link: https://adrianabroadnax.github.io/CodeQuiz/
+
 
