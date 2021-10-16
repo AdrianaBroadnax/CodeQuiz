@@ -7,6 +7,7 @@ var timerP = document.querySelector("#timer");
 var multipleChoice = document.querySelector("#choice");
 var questions = document.querySelector("#questionsA")
 var answer = document.querySelector("#answerA")
+const codeQuiz= document.getElementById("codeQuiz")
 
 var answerTrack = [];
 var wrongAnswer = 0;
@@ -46,10 +47,13 @@ function setTime() {
     }, 1000);
 }
 //  the questions will appear
-// startButton.addEventListener("click", function (onclick) {
-    document.getElementById("start-button").addEventListener("click", function() {
-        document.getElementById(startButton).innerHTML = "Start";
-      });
+var startButton = document.querySelector("#start-button");
+const CodeQuiz = document.getElementById("codeQuiz")
+startButton.addEventListener("click", function () {
+    console.log("start");
+    document.location = "index.html"
+    const CodeQuiz = ["#CodeQuiz"]
+})
 // questions are from w3schools Javascript quiz
 //  quiz must have 3-5 questions in a container
     var questions = [
